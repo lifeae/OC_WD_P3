@@ -76,7 +76,7 @@ main .row {
           align-items: center;
 }
 
-main h1 {
+main .row h1 {
   font-size: 1rem;
   margin: 0;
 }
@@ -102,13 +102,13 @@ footer a {
   padding: 15px 0 15px 0;
 }
 
-main a {
+.main-menu a {
   -webkit-box-shadow: 0px 0px 5px 1px #bdbdbd;
           box-shadow: 0px 0px 5px 1px #bdbdbd;
   margin: 20px;
 }
 
-main a .menus {
+.main-menu a .menus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,7 +125,7 @@ main a .menus {
   padding: 20px;
 }
 
-main a .menus h2 {
+.main-menu a .menus h2 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -296,9 +296,9 @@ svg {
 .menu3-theme {
   background-color: #edefef;
   font-family: 'Dancing Script', cursive;
-  background: -webkit-gradient(linear, left top, right top, from(#0228dd), to(#229df9));
-  background: linear-gradient(to right, #0228dd, #229df9);
-  background: -webkit-linear-gradient(to right, #0228dd, #229df9);
+  background: -webkit-gradient(linear, left top, right top, from(#c67412), to(#229df9));
+  background: linear-gradient(to right, #c67412, #229df9);
+  background: -webkit-linear-gradient(to right, #c67412, #229df9);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -318,7 +318,7 @@ svg {
   background-color: #fdfffd;
   font-family: 'Kaushan Script', cursive;
   background-image: -webkit-gradient(linear, left top, right top, from(#3d923a), to(#bfff81));
-  background-image: linear-gradient(to right, #3d923a 0%, #bfff81 100%);
+  background-image: linear-gradient(to right, #3d923a, #bfff81);
   background: -webkit-linear-gradient(to right, #3d923a, #bfff81);
   color: transparent;
   -webkit-background-clip: text;
@@ -348,7 +348,7 @@ svg {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  main a .menus {
+  .main-menu a .menus {
     width: 300px;
     height: 450px;
   }
@@ -359,11 +359,11 @@ svg {
 }
 
 @media (min-width: 768px) {
-  main {
+  .main-menu {
     -ms-flex-flow: wrap;
         flex-flow: wrap;
   }
-  main .row {
+  .main-menu .row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -375,7 +375,7 @@ svg {
 }
 
 @media (min-width: 1200px) {
-  main {
+  .main-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -387,7 +387,7 @@ svg {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  main .row {
+  .main-menu .row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
