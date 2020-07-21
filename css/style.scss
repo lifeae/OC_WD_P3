@@ -1,7 +1,10 @@
 @import './variables';
+@import './animations';
+@import './responsive';
 
-// MOBILE FIRST //
+// DEVELOPPED IN MOBILE FIRST //
 // Extra small devices (portrait phones, less than 576px)
+// Take a look at _responsive.scss for the other devices
 
 // Structures communes
 body {
@@ -77,6 +80,8 @@ footer {
     }
 }
 button {
+    display: flex;
+    flex-direction: row;
     background-color: $primary;
     color: $secondary;
     font-size: 1.2rem;
@@ -131,7 +136,6 @@ svg {
     font-size: 0.8rem;
     padding: 50px;
 }
-
 .menu1-theme {
     background-color: $menu1-bg-color;
     font-family: 'Devonshire', cursive;
@@ -151,7 +155,7 @@ svg {
         margin-right: 1rem;
         font-size: 2rem;
     }
-    h3 {
+    .menu {
         text-transform: uppercase;
         font-family: 'comic sans ms', sans-serif;
         font-style: italic;
@@ -163,6 +167,9 @@ svg {
     span {
         padding: 0.5rem 0rem 0.5rem 0rem;
     }
+    h2 {
+      font-size: 2rem;
+    }
 }
 .menu2-theme {
     background-color: $menu2-bg-color;
@@ -173,7 +180,7 @@ svg {
         -webkit-background-clip: text;
         color: transparent;
     }
-    h3 {
+    .menu {
         font-family: 'Georgia';
         color: $menu2-tx-color-h3;
         font-size: 2rem;
@@ -188,15 +195,14 @@ svg {
         color: $menu2-tx-color-3part;
     }
 }
-
 .menu3-theme {
     background-color: $menu3-bg-color;
     font-family: 'Dancing Script', cursive;
-    background: linear-gradient(to right, $menu2-gradient-start, $menu3-gradient-end);
-    background: -webkit-linear-gradient(to right, $menu2-gradient-start, $menu3-gradient-end); // Chrome, Safari
+    background: linear-gradient(to right, $menu3-gradient-start, $menu3-gradient-end);
+    background: -webkit-linear-gradient(to right, $menu3-gradient-start, $menu3-gradient-end); // Chrome, Safari
     -webkit-background-clip: text;
     color: transparent;
-    h3 {
+    .menu {
         font-family: 'comic sans ms';
         font-style: italic;
         color: $menu3-tx-color-h3;
@@ -213,7 +219,7 @@ svg {
     background: -webkit-linear-gradient(to right, $menu4-gradient-start, $menu4-gradient-end); // Chrome, Safari
     color: transparent;
     -webkit-background-clip: text;
-    h3 {
+    .menu {
         font-family: 'comic sans ms';
         font-style: italic;
         color: $menu4-tx-color-h3;
@@ -221,54 +227,5 @@ svg {
     }
     span, .menu-header {
         color: $menu4-tx-color;
-    }
-}
-
-// MEDIA QUERIES //
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .main-menu a {
-        .menus {
-            width: 300px;
-            height: 450px;
-        }
-    }
-    .menu-card {
-        width: 400px;
-        height: auto;
-    }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-    .main-menu {
-        flex-flow: wrap;
-        .row {
-            display: flex;
-            flex-direction: row;
-        }
-    }
-}  
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-    .main-menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        .row {
-            display: flex;
-            flex-direction: row;
-        }
     }
 }

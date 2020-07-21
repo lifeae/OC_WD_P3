@@ -1,0 +1,101 @@
+// ANIMATIONS
+
+// Scale et opacity sur les menus
+.row a {
+    overflow: hidden;
+    section {
+        transform: scale(1);
+        transition: all 0.4s;
+        &:hover {
+            transform: scale(1.15);
+            opacity: 0.7;
+        }
+    }
+}
+// les "..." du bouton "Prochainement"
+.three-little-points {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    50% {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.first-point, .second-point, .third-point {
+    animation: fade 1s;
+    animation-iteration-count: infinite;
+}
+
+.second-point {
+    animation-delay: 0.333s;
+}
+
+.third-point {
+    animation-delay: 0.666s;
+}
+
+// Le wiggle sur les éléments du footer
+footer a:hover {
+  animation: wiggle 1s;
+}
+
+@keyframes wiggle {
+  0% { transform: skewX(18deg); } 
+  10% { transform: skewX(-16deg); } 
+  20% { transform: skewX(14deg); } 
+  30% { transform: skewX(-12deg); } 
+  40% { transform: skewX(10deg); } 
+  50% { transform: skewX(-8deg); } 
+  60% { transform: skewX(6deg); } 
+  70% { transform: skewX(-4deg); } 
+  80% { transform: skewX(2deg); } 
+  90% { transform: skewX(0deg); } 
+  100% { transform: skewX(0deg); } 
+}
+
+// Soulignage des menus
+
+.menu-header h3 {
+    position: relative;
+}
+.menu1-theme .menu-header .menu1UnderlineAnimation:after {
+    background: $menu1-tx-color;
+}
+.menu2-theme .menu-header .menu2UnderlineAnimation1:after {
+    background: $menu2-tx-color-1part;
+}
+.menu2-theme .menu-header .menu2UnderlineAnimation2:after {
+    background: $menu2-tx-color-2part;
+}
+.menu2-theme .menu-header .menu2UnderlineAnimation3:after {
+    background: $menu2-tx-color-3part;
+}
+.menu3-theme .menu-header .menu3UnderlineAnimation:after {
+    background: $menu3-tx-color;
+}
+.menu4-theme .menu-header .menu4UnderlineAnimation:after {
+    background: $menu4-tx-color;
+}
+.menu-header h3:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+.menu-header h3:hover:after,
+.menu-header h3:focus:after,
+.menu-header h3:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
