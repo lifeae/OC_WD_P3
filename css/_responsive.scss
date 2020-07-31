@@ -25,7 +25,7 @@
       flex-flow: wrap;
       .row {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
       }
   }
 }  
@@ -40,15 +40,6 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .main-menu {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      .row {
-          display: flex;
-          flex-direction: row;
-      }
-  }
   .menu-card {
     width: 900px;
     height: auto;

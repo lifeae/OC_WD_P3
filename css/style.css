@@ -211,7 +211,8 @@ footer a:hover {
   background: #000000;
 }
 
-body {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -221,9 +222,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
   font-family: 'arial', serif;
@@ -295,6 +296,9 @@ main .row h1 {
 }
 
 footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,9 +307,6 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
   font-size: 1rem;
   font-weight: 700;
   padding: 10px;
@@ -442,6 +443,7 @@ svg {
   background-color: #fcdfdb;
   font-family: 'Devonshire', cursive;
   color: #000000;
+  font-size: 2rem;
 }
 
 .menu1-theme .icon-music-big, .menu1-theme .icon-music-little {
@@ -483,7 +485,7 @@ svg {
 }
 
 .menu1-theme h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
 
 .menu2-theme {
@@ -601,10 +603,10 @@ svg {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -616,27 +618,6 @@ svg {
 }
 
 @media (min-width: 1200px) {
-  .main-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .main-menu .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
   .menu-card {
     width: 900px;
     height: auto;

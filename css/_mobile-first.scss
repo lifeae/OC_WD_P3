@@ -3,12 +3,13 @@
 // Take a look at _responsive.scss for the other devices
 
 // Structures communes
-body {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   font-family: 'arial', serif;
 }
@@ -45,11 +46,11 @@ main {
   }
 }
 footer {
+  position: sticky;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   text-align: center;
-  position: sticky;
-  bottom: 0;
   font-size: 1rem;
   font-weight: 700;
   padding: 10px;
@@ -136,6 +137,7 @@ svg {
   background-color: $menu1-bg-color;
   font-family: 'Devonshire', cursive;
   color: $menu1-tx-color;
+  font-size: 2rem;
   .icon-music-big, .icon-music-little {
       background: linear-gradient(to right,$menu1-gradient-start,$menu1-gradient-end);
       background: -webkit-linear-gradient(to right,$menu1-gradient-start,$menu1-gradient-end); // Chrome, Safari
@@ -164,7 +166,7 @@ svg {
       padding: 0.5rem 0rem 0.5rem 0rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 }
 .menu2-theme {
